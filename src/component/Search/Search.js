@@ -32,10 +32,20 @@ const Search = () => {
 
   const renderSearchResults = searchResult ? <SearchResults searchResult={searchResult} /> : null;
 
+  const loading = (!searchResult && searchTerm) ? 
+    <div className="ui segment expand top-space-2">
+      <div className="ui active inverted dimmer">
+        <div className="ui text loader">Loading</div>
+      </div>
+    </div>
+    : null
+
   return (
     <div>
       <h1 className="text-center">WIKIPEDIA</h1>
       <SearchBar searchTerm={searchTerm} handleInputChange={updateSearchTerm} />
+  
+      {loading}
       {renderSearchResults}
     </div>
   );

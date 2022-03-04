@@ -23,7 +23,7 @@
 }
 
 .top-space-2 {
-  margin-top: 30px
+  margin-top: 30px !important
 }
 
 .text-capitalize {
@@ -32,4 +32,8 @@
 
 .hide {
   display: none;
+}
+
+.expand {
+  padding: 100px !important;
 }

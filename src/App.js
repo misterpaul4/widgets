@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Accordion from "./component/Accordion/Accordion";
 import Search from "./component/Search/Search";
 import Dropdown from "./component/Dropdown/Dropdown";
 import Translate from "./component/Translate/Translate";
+import Route from "./Route";
+import { options } from "./component/Translate/languageOptions";
 
 const items = [
   {
@@ -20,11 +22,25 @@ const items = [
 ]
 
 function App() {
+  const [selected, updatedSelected] = useState("tr");
 
   return (
     <div className="app">
-      {/* <Dropdown options={options} label="select a color" currentValue={selected} onSelectChange={updatedSelected} /> */}
-      <Translate />
+      <Route path="/accordion">
+        <Accordion items={items} />
+      </Route>
+
+      <Route path="/wikipedia">
+        <Search />
+      </Route>
+
+      <Route path="/dropdown">
+        <Dropdown options={options} label="select language" currentValue={selected} onSelectChange={updatedSelected} />
+      </Route>
+
+      <Route path="/translate">
+        <Translate />
+      </Route>
     </div>
   );  
 }

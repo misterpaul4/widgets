@@ -25,7 +25,7 @@ export default class Translate extends Component {
     null
     
     return (
-      <div>
+      <div className='ui segment'>
         <SearchBar searchTerm={this.state.searchTerm} handleInputChange={this.updateSearchTerm} />
         <div className='top-space-2'>
           <Dropdown className='top-space' options={options} label="select language" currentValue={this.state.selected} onSelectChange={this.updatedSelected} />
