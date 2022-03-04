@@ -1,0 +1,23 @@
+.border {
+  border: 1px solid red;
+}
+
+.app, .search-result {
+  padding: 20px;
+}
+
+.unselectable {
+  user-select: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.search-result-card {
+  margin: 1px;
+}
+
+.top-space {
+  margin-top: 15px
+}
